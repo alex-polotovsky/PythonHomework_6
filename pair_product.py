@@ -6,7 +6,8 @@
 
 
 def pair_product(numbers):
-    product_numbers = [numbers[i] * numbers[-1 + (-i)] for i in range((len(numbers)+1) // 2)]
+    product_numbers = [numbers[i] * numbers[-1 + (-i)]
+                       for i in range((len(numbers)+1) // 2)]
     return product_numbers
 
 

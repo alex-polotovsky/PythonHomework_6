@@ -12,21 +12,21 @@
 from random import randint
 
 
-def get_polinom_var(k):
+def get_polinom_var(n):
     """Принимает натуральное значение степени полинома.
     Возвращает список его переменных.
     """
-    pvar = [f'x^{i}' for i in range(k, 1, -1)]
+    pvar = [f'x^{i}' for i in range(n, 1, -1)]
     pvar.append('x')
     print('Список переменных: ', pvar)
     return pvar
 
 
-def get_polinom_index(k):
+def get_polinom_index(n):
     """Принимает натуральное значение степени полинома.
     Возвращает список его коэффициентов.
     """
-    pind = [randint(0, 100) for i in range(k + 1)]
+    pind = [randint(0, 100) for i in range(n + 1)]
     if pind[0] == 0:
         pind[0] = randint(1, 100)
     pind = list(map(str, pind))
