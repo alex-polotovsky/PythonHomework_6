@@ -7,7 +7,7 @@ def create_file(text):
     """Принимает текст и создаёт файл с этим текстом.
     """
     name = input('Задайте путь к файлу: ')
-    with open(name, 'a') as my_fl:
+    with open(name, 'w') as my_fl:
         my_fl.writelines(text)
 
 
@@ -25,7 +25,8 @@ def delete_substr(user_str, sub_str):
     Возвращает строку без подстроки.
     """
     user_str_list = user_str.split()
-    edit_str_list = filter(lambda el: sub_str not in el, user_str_list)
+    # edit_str_list = filter(lambda el: sub_str not in el, user_str_list)
+    edit_str_list = [el for el in user_str_list if sub_str not in el]
     edit_str = ' '.join(edit_str_list)
     return edit_str
 
